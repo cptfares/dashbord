@@ -1,0 +1,246 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.root {
+  position: fixed;
+  width: 284px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-color);
+  -webkit-transition: background-color 0.2s ease, margin 0.2s ease;
+  transition: background-color 0.2s ease, margin 0.2s ease;
+}
+
+.root::-webkit-scrollbar {
+  height: 8px;
+  width: 4px;
+}
+
+.root::-webkit-scrollbar-thumb {
+  border: none;
+  background-color: transparent;
+}
+
+.root:hover::-webkit-scrollbar-thumb {
+  background-color: #FFBF69;
+}
+
+.logoStyle {
+  margin-right: 8px;
+}
+
+.sidebarWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-width: 284px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  background-color: var(--sidebar-bg-color);
+  z-index: 999;
+  -webkit-box-shadow: 4px 4px 25px rgba(109, 105, 105, 0.15);
+          box-shadow: 4px 4px 25px rgba(109, 105, 105, 0.15);
+}
+
+@media (max-width: 767.98px) {
+  .sidebarClose.sidebarWrapper {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sidebarClose.sidebarWrapper .root {
+    width: 0;
+  }
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 66px;
+  background-color: #feb049;
+  font-size: 30px;
+  width: 100%;
+  font-weight: 300;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  color: var(--logo-color);
+}
+
+.logo a {
+  padding: 0 5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo span {
+  font-weight: 700;
+}
+
+.sidebarClose .logo {
+  display: none;
+}
+
+.staticSidebar .logo {
+  width: 100%;
+}
+
+.nav {
+  padding: 30px 0 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.downNav {
+  padding: 34px 0 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.downNav hr {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 85%;
+}
+
+.navTitle {
+  margin: 35px 0 0px 32px;
+  font-size: 1.1rem;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  color: var(--sidebar-nav-title-color);
+}
+
+@media (min-width: 992px) {
+  .navTitle {
+    opacity: 1;
+  }
+}
+
+.sidebarClose .navTitle {
+  opacity: 0;
+}
+
+.staticSidebar .navTitle {
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.actionLink {
+  color: #aaa;
+  float: right;
+  margin-right: 15px;
+  margin-top: -1px;
+}
+
+.labelName {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebarClose .labelName {
+  opacity: 0;
+}
+
+.staticSidebar .labelName {
+  -webkit-transition: none;
+  transition: none;
+  opacity: 1;
+}
+
+.glyphiconSm {
+  font-size: 9px;
+}
+
+.sidebarLabels {
+  margin-left: 5px;
+  list-style-type: none;
+  padding: 11px;
+  padding-right: 15px;
+}
+
+.sidebarLabels > li + li {
+  margin-top: 10px;
+}
+
+.sidebarLabels li > a {
+  font-size: 1rem;
+  color: var(--sidebar-color);
+  text-decoration: none;
+}
+
+.sidebarLabels li > a > i {
+  font-size: 11px;
+  vertical-align: 1px;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebarClose .sidebarLabels > li > a > i {
+  margin-left: 8px;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.staticSidebar .sidebarLabels > li > a > i {
+  -webkit-transition: none;
+  transition: none;
+  margin-left: 0;
+}
+
+.sidebarAlerts {
+  margin-bottom: 2rem;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.sidebarClose .sidebarAlerts {
+  opacity: 0;
+}
+
+.staticSidebar .sidebarAlerts {
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.sidebarAlert {
+  background: transparent;
+  margin-bottom: 0;
+  padding: 0.5rem 11px;
+  padding-right: 15px;
+}
+
+.sidebarProgress {
+  background-color: var(--sidebar-progress-bg-color);
+}
+
+.groupTitle {
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=Sidebar.module.css.map */

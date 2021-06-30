@@ -1,0 +1,30 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.root {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.root i {
+  font-size: 21px;
+  margin: 0 1rem;
+}
+/*# sourceMappingURL=Loader.module.css.map */

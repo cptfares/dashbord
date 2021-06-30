@@ -1,0 +1,369 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.title {
+  margin-top: 0;
+  color: #444;
+  padding: 30px 30px 0 30px;
+  font-size: 18px;
+}
+
+.title::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+:global .h-100 {
+  height: 100%;
+}
+
+.reloading {
+  min-height: 150px;
+}
+
+.widgetBackground {
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #F9FBFD;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 55;
+}
+
+:global .fullscreened {
+  position: fixed !important;
+  top: 50%;
+  right: 0px;
+  bottom: 0px;
+  height: 60vh;
+  left: 50%;
+  margin: 0px;
+  z-index: 10000;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+@media (max-width: 1400px) {
+  :global .fullscreened {
+    position: fixed !important;
+    top: 50%;
+    height: 70vh;
+    right: 0px;
+    bottom: 0px;
+    left: 50%;
+    margin: 0px;
+    z-index: 10000;
+    -webkit-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  :global .fullscreened {
+    position: fixed !important;
+    top: 50%;
+    height: 90vh;
+    width: 90vw;
+    right: 0px;
+    bottom: 0px;
+    left: 50%;
+    margin: 0px;
+    z-index: 10000;
+    -webkit-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
+  }
+}
+
+:global .widget.collapsed > header {
+  -webkit-transition: padding .3s linear;
+  transition: padding .3s linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  padding: 23px 30px;
+}
+
+:global .widget.collapsed > h5 {
+  -webkit-transition: padding .3s, margin-bottom .3s linear;
+  transition: padding .3s, margin-bottom .3s linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  padding: 23px 30px;
+  margin-bottom: 0;
+}
+
+.widget {
+  display: block;
+  position: relative;
+  margin-bottom: 40px;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: var(--widget-shadow);
+          box-shadow: var(--widget-shadow);
+}
+
+.widget > header {
+  -webkit-transition: padding .3s linear;
+  transition: padding .3s linear;
+  padding: 23px 30px 0;
+}
+
+.widget > header h1,
+.widget > header h2,
+.widget > header h3,
+.widget > header h4,
+.widget > header h5,
+.widget > header h6 {
+  margin: 0;
+}
+
+.widget :global .loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.widget :global .loader .spinner {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.widget :global .widget-body.undo_padding {
+  margin: 23px -30px -23px;
+}
+
+.widget :global .widget-body.undo_padding + footer {
+  margin-top: 23px;
+}
+
+.widget:global.bg-transparent {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.widget:global.p-0 .widget-body {
+  padding: 0 !important;
+}
+
+.widgetBody {
+  padding: 0 30px 23px;
+}
+
+.widgetBody::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.widgetBody > footer {
+  margin: 0.5rem -30px -23px;
+  padding: 10px 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.widgetControls + .widgetBody {
+  margin-top: 23px;
+}
+
+.widgetControls + .widgetBody.widgetCollapsing {
+  margin-top: 0;
+}
+
+.customControlItem {
+  cursor: pointer;
+}
+
+.widgetControls,
+:global(.widget-controls) {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  padding: 24px 30px 0 30px;
+  font-size: 0.875rem;
+}
+
+.widgetControls button,
+:global(.widget-controls) button {
+  padding: 1px 4px;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.4);
+  background: transparent;
+  border: none;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .widgetControls button,
+  :global(.widget-controls) button {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.widgetControls button:hover,
+:global(.widget-controls) button:hover {
+  color: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.widgetControls button:active, .widgetControls button:focus,
+:global(.widget-controls) button:active,
+:global(.widget-controls) button:focus {
+  outline: none;
+}
+
+.widgetControls button :global .la,
+:global(.widget-controls) button :global .la {
+  position: relative;
+  top: 2px;
+}
+
+.widgetControls button :global .glyphicon,
+:global(.widget-controls) button :global .glyphicon {
+  font-size: 0.7rem;
+}
+
+.inverse {
+  top: 2px;
+  position: relative;
+  margin-left: 3px;
+}
+
+.inverse :global .glyphicon {
+  vertical-align: baseline;
+}
+
+:global .widget-image {
+  position: relative;
+  overflow: hidden;
+  margin: -23px -30px;
+  border-radius: 0.3rem;
+}
+
+:global .widget-image > img {
+  max-width: 100%;
+  border-radius: 0.3rem 0.3rem 0 0;
+  -webkit-transition: -webkit-transform 0.15s ease;
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+}
+
+:global .widget-image:hover > img {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+:global .widget-image .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+}
+
+:global .widget-image .info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+:global .widget-footer-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+:global .widget-sm {
+  height: 230px;
+}
+
+:global .widget-md {
+  height: 373px;
+}
+
+:global .widget-padding-md {
+  padding: 23px 30px;
+}
+
+:global .widget-padding-lg {
+  padding: 46px 60px;
+}
+
+:global .widget-body-container {
+  height: 100%;
+}
+
+:global .widget-top-overflow,
+:global .widget-middle-overflow {
+  position: relative;
+  margin: 0 -30px;
+}
+
+:global .widget-top-overflow > img,
+:global .widget-middle-overflow > img {
+  max-width: 100%;
+}
+
+:global .widget-top-overflow {
+  margin-top: -23px;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  overflow: hidden;
+}
+
+:global .widget-top-overflow > img {
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+:global .widget-top-overflow > .btn-toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  margin-right: 30px;
+}
+
+@media (min-width: 768px) {
+  :global .widget-top-overflow > .btn-toolbar {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+:global .widget-icon {
+  opacity: 0.5;
+  font-size: 42px;
+  height: 60px;
+  line-height: 45px;
+  display: inline-block;
+}
+
+.widgetLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*# sourceMappingURL=Widget.module.css.map */

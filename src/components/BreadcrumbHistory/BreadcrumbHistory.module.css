@@ -1,0 +1,41 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.customDropdown {
+  background: #fff;
+  margin-right: 32px;
+  -webkit-box-shadow: 4px 4px 25px rgba(109, 105, 105, 0.25) !important;
+          box-shadow: 4px 4px 25px rgba(109, 105, 105, 0.25) !important;
+}
+
+.btnShadow {
+  -webkit-box-shadow: 4px 4px 25px rgba(109, 105, 105, 0.25) !important;
+          box-shadow: 4px 4px 25px rgba(109, 105, 105, 0.25) !important;
+  text-transform: initial;
+}
+
+@media (max-width: 991.98px) {
+  .dashboardButtons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch !important;
+        -ms-flex-align: stretch !important;
+            align-items: stretch !important;
+    margin-bottom: 18px;
+  }
+  .dashboardButtons .customDropdown {
+    margin-right: 0 !important;
+    margin-bottom: 18px;
+  }
+}
+/*# sourceMappingURL=BreadcrumbHistory.module.css.map */

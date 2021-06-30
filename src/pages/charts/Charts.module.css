@@ -1,0 +1,81 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.root :global {
+  /*       NVD3      */
+  /*         Flot        */
+  /*   Easy Pie Chart    */
+}
+
+.root :global .nvtooltip {
+  padding: 0.25rem 0.75rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.root :global .nvtooltip p {
+  margin: 0;
+  padding: 0;
+}
+
+.root :global .nvtooltip h3 {
+  background: none;
+  border-bottom: 0;
+}
+
+.root :global svg text {
+  font: 300 0.875rem "Nunito", sans-serif;
+  fill: #323232;
+}
+
+.root :global svg .title {
+  font: 700 1rem "Nunito", sans-serif;
+}
+
+.root :global .nvd3.nv-noData {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.root :global .nvd3 .nv-axis path.domain {
+  stroke-opacity: 0;
+}
+
+.root :global .nv-controlsWrap .nv-legend-symbol {
+  fill: #666 !important;
+  stroke: #666 !important;
+}
+
+.root :global .chart-tooltip {
+  position: fixed;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #798892;
+  font-size: 0.9rem;
+  background-color: #fff;
+}
+
+.root :global .easy-pie-chart {
+  position: relative;
+  display: inline-block;
+  line-height: 120px;
+  height: 120px;
+  width: 120px;
+  text-align: center;
+  color: #798892;
+}
+
+.root :global .easy-pie-chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*# sourceMappingURL=Charts.module.css.map */

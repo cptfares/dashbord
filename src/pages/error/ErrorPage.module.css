@@ -1,0 +1,80 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.errorPage {
+  height: 100vh;
+}
+
+.errorPage img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 80%;
+}
+
+@media (max-width: 767.98px) {
+  .errorPage img {
+    display: none;
+  }
+}
+
+.errorContainer {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.errorBtn {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.errorCode {
+  margin: 20px;
+  font-size: 80px;
+  font-weight: 400;
+  color: #1F7DB6;
+}
+
+@media (min-width: 768px) {
+  .errorCode {
+    font-size: 180px;
+  }
+}
+
+.errorInfo {
+  font-size: 140px;
+}
+
+.errorHelp {
+  font-size: 44px;
+  width: 390px;
+}
+
+.pageFooter {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #798892;
+  text-align: center;
+}
+/*# sourceMappingURL=ErrorPage.module.css.map */

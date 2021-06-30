@@ -1,0 +1,206 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.headerLink {
+  overflow-x: hidden;
+  font-size: 1rem !important;
+  margin: 5px 0;
+}
+
+.headerLink:first-child {
+  margin: 0 0 5px 0;
+}
+
+@media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
+  .headerLink {
+    font-size: 13px;
+  }
+}
+
+.headerLink a {
+  display: block;
+  color: var(--sidebar-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.headerLink a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headerLink:last-child > a {
+  border-bottom: 1px solid transparent;
+}
+
+.headerLink > a {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 35px;
+  line-height: 35px;
+  border-top: 1px solid transparent;
+}
+
+.headerLink > a img {
+  margin-right: 16px;
+}
+
+.headerLink > a:hover {
+  font-weight: bold;
+}
+
+.headerLink > a > i {
+  margin-right: 7px;
+}
+
+@media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
+  .headerLink > a {
+    line-height: 45px;
+  }
+}
+
+.headerLink .icon {
+  font-size: 1.1rem;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 11px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  opacity: .7;
+}
+
+@media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
+  .headerLink .icon {
+    top: 12px;
+  }
+}
+
+.headerLink .badge {
+  float: right;
+  line-height: 16px;
+  margin-top: 5px;
+  margin-right: 15px;
+  background: rgba(255, 234, 206, 0.51);
+  color: var(--badge-item-color);
+  border: 1px solid #FFAD01;
+  font-weight: 400;
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
+  .headerLink .badge {
+    margin-top: 12px;
+  }
+}
+
+.headerLink .headerNode {
+  color: var(--important-notification);
+}
+
+.headerLink .headerUpdate {
+  color: var(--update-notification);
+}
+
+.headerLink a.headerLinkActive {
+  color: var(--sidebar-item-active-color);
+  font-weight: 700;
+}
+
+.headerLink a.headerLinkActive:hover {
+  color: var(--sidebar-item-active-color);
+}
+
+.headerLink a.headerLinkActive .icon {
+  border-radius: 50%;
+  background-color: var(--sidebar-item-active-color);
+  opacity: 1;
+}
+
+.headerLink a.headerLinkActive .icon i {
+  color: var(--sidebar-bg-color);
+}
+
+.headerLabel {
+  font-weight: 600;
+  color: var(--sidebar-item-active-color);
+}
+
+.collapsed .activeCaret {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+img.caret, img.activeCaret {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: 35px !important;
+  margin-bottom: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  img.caret, img.activeCaret {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.panel {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 0;
+  border-radius: 0;
+}
+
+.panel a.headerLinkActive {
+  font-weight: 600;
+  color: var(--sidebar-color);
+}
+
+.panel a.headerLinkActive:hover {
+  color: var(--sidebar-color);
+}
+
+.panel ul {
+  margin-top: 13px;
+  background: rgba(255, 173, 1, 0.1);
+  padding: 1rem;
+  border-right: 3px #FFAB3C solid;
+}
+
+.panel ul li {
+  list-style: none;
+}
+
+.panel ul a {
+  padding: 10px 20px 10px 26px;
+  font-size: 0.9rem;
+}
+
+.panel ul a:hover {
+  font-weight: 600;
+}
+/*# sourceMappingURL=LinksGroup.module.css.map */

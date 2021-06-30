@@ -1,0 +1,46 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.notifications {
+  height: 100%;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .notifications {
+    width: 333px;
+  }
+}
+
+@media (min-width: 768px) {
+  .notificationsAccount {
+    width: 178px;
+  }
+}
+
+.cardHeader {
+  border-radius: 0;
+}
+
+.cardFooter {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.btnNotificationsReload {
+  color: #323232;
+  outline: none;
+}
+
+.btnNotificationsReload i::before {
+  top: 2px;
+}
+/*# sourceMappingURL=Notifications.module.css.map */

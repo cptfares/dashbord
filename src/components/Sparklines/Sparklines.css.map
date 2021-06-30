@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC,kBAAkB,CAAC;EAClC,UAAU,EAAE,WAAW;CACxB",
+    "sources": [
+        "Sparklines.scss"
+    ],
+    "names": [],
+    "file": "Sparklines.css"
+}

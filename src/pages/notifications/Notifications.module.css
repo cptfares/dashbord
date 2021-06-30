@@ -1,0 +1,69 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.root :global .location-selector {
+  width: 100%;
+  height: 220px;
+  border: 1px dotted #FFBF69;
+  background-color: #fff;
+  position: relative;
+}
+
+.root :global .location-selector .bit {
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  background-color: rgba(255, 173, 1, 0.3);
+  cursor: pointer;
+  position: absolute;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root :global .location-selector .bit {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.root :global .location-selector .bit:hover {
+  background-color: #FFBF69;
+}
+
+.root :global .location-selector .bit.top,
+.root :global .location-selector .bit.bottom {
+  height: 20%;
+  width: 20%;
+  margin: 0 40%;
+}
+
+.root :global .location-selector .bit.top {
+  top: 0;
+}
+
+.root :global .location-selector .bit.bottom {
+  bottom: 0;
+}
+
+.root :global .location-selector .bit.right,
+.root :global .location-selector .bit.left {
+  height: 20%;
+  width: 20%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.root :global .location-selector .bit.right {
+  right: 0;
+}
+
+.root :global .location-selector .bit.left {
+  left: 0;
+}
+/*# sourceMappingURL=Notifications.module.css.map */

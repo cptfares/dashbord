@@ -1,0 +1,21 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+td {
+  vertical-align: middle !important;
+}
+
+.table-bordered th {
+  background: #1F7DB6;
+  color: #f8f9fa;
+  border: none;
+}
+/*# sourceMappingURL=Tables.modules.css.map */

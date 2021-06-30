@@ -1,0 +1,108 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+@media (min-width: 1170px) and (max-width: 1280px) {
+  .root .dashboardBlock {
+    display: none;
+  }
+}
+
+.root .dailyLineChart {
+  margin-top: -36px;
+}
+
+@media (max-width: 991.98px) {
+  .root .dailyLineChart {
+    margin-top: 0;
+  }
+}
+
+.root .pieElements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.root .pieElementsDanger {
+  border-top: 3px solid #FF7769;
+}
+
+.root .pieElementsWarning {
+  border-top: 3px solid #FFBF69;
+}
+
+.root .pieElementsBlack {
+  border-top: 3px solid #323232;
+}
+
+.root .pieElements p {
+  color: rgba(50, 50, 50, 0.6);
+  white-space: nowrap;
+}
+
+.root :global .post-comments footer {
+  margin: 0 -30px -23px;
+  padding: 23px 30px;
+}
+
+.root :global .stat-item .name {
+  margin-top: 10px;
+}
+
+.root h5 {
+  color: rgba(50, 50, 50, 0.6);
+}
+
+.root .dashboardImg {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  width: 40%;
+}
+
+@media (max-width: 991.98px) {
+  .root .dashboardImg {
+    width: 100%;
+    position: static;
+    margin-bottom: -28px;
+  }
+}
+
+.root .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .root .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.table :global(.table.table-sm) td {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=Dashboard.module.css.map */

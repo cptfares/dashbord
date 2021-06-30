@@ -1,0 +1,49 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.root :global .icon-list {
+  margin-top: 1rem;
+}
+
+.root :global .icon-list-item {
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.root :global .icon-list-item > a {
+  color: #323232;
+  text-decoration: none;
+}
+
+.root :global .icon-list-item .glyphicon,
+.root :global .icon-list-item .fa,
+.root :global .icon-list-item .fi {
+  width: 32px;
+  margin-right: 10px;
+}
+
+.root :global .icon-list-item:hover .glyphicon,
+.root :global .icon-list-item:hover .fa,
+.root :global .icon-list-item:hover .fi {
+  font-size: 28px;
+  top: 2px;
+}
+
+.root :global .icon-list-item:hover .fa,
+.root :global .icon-list-item:hover .fi {
+  vertical-align: -5px;
+}
+
+.root :global .icon-list-item:hover .glyphicon {
+  vertical-align: -6px;
+}
+/*# sourceMappingURL=Icons.module.css.map */

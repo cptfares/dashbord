@@ -1,0 +1,80 @@
+/**
+ * Customized version of bootstrap using variables from _variables.scss.
+ * This file is loaded via separate loader thus allowing to use original bootstrap classes (e.g. .btn-default) through out the app.
+ */
+/*
+ * Typography
+ * ======================================================================== */
+/**
+ * Custom application mixins available through out the app
+ */
+/* Chat Scrollbar */
+.root {
+  height: 100%;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+
+.wrap {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 284px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  -webkit-transition: left 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+
+@media (max-width: 767.98px) {
+  .wrap {
+    margin-left: 0px;
+  }
+}
+
+.sidebarClose div.wrap {
+  left: 0;
+}
+
+.sidebarStatic .wrap {
+  left: 0;
+  margin-left: 284px;
+}
+
+.content {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 40px 40px 60px;
+  background-color: #FAFAFA;
+}
+
+@media (max-width: 767.98px) {
+  .content {
+    padding: 25px 25px 70px;
+  }
+}
+
+@media (min-width: 576px) {
+  .content {
+    -webkit-user-select: auto !important;
+       -moz-user-select: auto !important;
+        -ms-user-select: auto !important;
+            user-select: auto !important;
+  }
+}
+
+.contentFooter {
+  position: absolute;
+  bottom: 15px;
+  color: #798892;
+}
+/*# sourceMappingURL=Layout.module.css.map */
